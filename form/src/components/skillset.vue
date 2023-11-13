@@ -16,10 +16,9 @@ function deleteSkill(skill){
     <button @click="addSkill">Hozzáadás</button><br>
     <div class="card">
         <h3>Képességeim:</h3>
-        <div v-for="skill in skills">
-            {{skill}}
-            <button @click="deleteSkill(skill)">Törlés</button>
-        </div>
+        <ul v-for="skill in skills">
+            <li @click="deleteSkill(skill)">{{skill}}</li>
+        </ul>
         
     </div>
 </template>
